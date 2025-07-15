@@ -248,6 +248,12 @@
     let bpm = 20;
     let timer = null;
     let audioPlayer = null;
+    // Sblocco audio per iOS
+window.addEventListener("touchstart", () => {
+  const unlock = new Audio();
+  unlock.play().then(() => unlock.pause());
+}, { once: true });
+
 
     const fileMap = {
       "𝟷": "1.ogg", "𝟸": "2.ogg", "𝟹": "3.ogg", "𝟺": "4.ogg", "𝟻": "5.ogg", "𝟼": "6.ogg", "𝟽": "7.ogg", "𝟾": "8.ogg", "𝟿": "9.ogg",
